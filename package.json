@@ -1,0 +1,12 @@
+{
+  "name": "guessing-color-game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adeola BUsayo",
+  "license": "ISC",
+  "description": "The main goal is to create an interactive and engaging color guessing game where players need to select the correct color based on RGB values."
+}
