@@ -7,11 +7,11 @@
     <title>Guessing Color Game</title>
   </head>
   <body>
-    <!-- Display a box with a randomly selected color, this will be the target color for the game -->
     <div class="game-container">
       <div class="header">
         <h1>Color Guessing Game</h1>
-        <div class="instructions">
+        <!-- Display a message explaining the goal of the game (e.g., “Guess the correct color!“). -->
+        <div data-testid="gameInstructions" class="instructions">
           Match the color shown in the box above by selecting the correct color
           button below. Test your color recognition skills and try to achieve
           the highest score!
@@ -19,13 +19,22 @@
       </div>
 
       <div class="score-container">
-        <div class="score-box">Score: <span class="score">0</span></div>
-        <button class="control-button" onclick="resetGame()">New Game</button>
+        <div data-testid="score" class="score-box">
+          Score: <span class="score">0</span>
+        </div>
+        <button
+          data-testid="newGameButton"
+          class="control-button"
+          onclick="resetGame()"
+        >
+          New Game
+        </button>
       </div>
-
+      <!-- Display a box with a randomly selected color, this will be the target color for the game -->
       <div data-testid="colorBox" class="target-box"></div>
+      <!-- Display 6 color buttons, each representing a potential guess for the target color -->
       <div data-testid="colorOption" class="buttons-container"></div>
-      <div class="message"></div>
+      <div data-testid="gameStatus" class="message"></div>
     </div>
 
     <script src="script.js"></script>

@@ -15,6 +15,7 @@ const colors = [
   '#E67E22',
 ];
 
+// Function that generate a random color
 function getRandomColors(count) {
   const shuffled = [...colors].sort(() => 0.5 - Math.random());
   return shuffled.slice(0, count);
