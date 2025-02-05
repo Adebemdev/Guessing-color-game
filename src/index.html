@@ -3,10 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheets" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Guessing Color Game</title>
   </head>
   <body>
-    <h1>This is a guessing color game!!!</h1>
+    <!-- Display a box with a randomly selected color, this will be the target color for the game -->
+    <div class="game-container">
+      <div class="header">
+        <h1>Color Guessing Game</h1>
+        <div class="instructions">
+          Match the color shown in the box above by selecting the correct color
+          button below. Test your color recognition skills and try to achieve
+          the highest score!
+        </div>
+      </div>
+
+      <div class="score-container">
+        <div class="score-box">Score: <span class="score">0</span></div>
+        <button class="control-button" onclick="resetGame()">New Game</button>
+      </div>
+
+      <div data-testid="colorBox" class="target-box"></div>
+      <div data-testid="colorOption" class="buttons-container"></div>
+      <div class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
